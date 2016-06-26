@@ -7,8 +7,8 @@ string getPayment()
 {
 	char answer;
 	cout << "How would you like to pay? " << "\n1. To pay with money press \"M\""
-		 << "\n2. To pay with a credit card press \"C\""
-		 << "\n3. To pay with gold press \"G\"" << endl;
+	     << "\n2. To pay with a credit card press \"C\""
+	     << "\n3. To pay with gold press \"G\"" << endl;
 	cin >> answer;
 
 	switch (answer)
@@ -65,8 +65,8 @@ int main()
 		count++;
 
 		cout << "Hi there " << customerName << "!\nHere's our menu:\n1. " << lemonadeName << " ~ $" << lemonadePrice
-			 << "\n2. " << rosemaryName << " ~ $" << rosemaryPrice
-			 << "\n3. " << raspberryName << " ~ $" << fixed << setprecision(2) << raspberryPrice << endl;
+	             << "\n2. " << rosemaryName << " ~ $" << rosemaryPrice
+		     << "\n3. " << raspberryName << " ~ $" << fixed << setprecision(2) << raspberryPrice << endl;
 
 		cout << "Which type of lemonade would you like? (1-3): " << flush;
 		cin >> choice;
@@ -74,23 +74,23 @@ int main()
 		switch (choice)
 		{
 		  case 1: cout << "Excellent choice! How many glasses of " << lemonadeName << " would you like? " << flush;
-		  	  	  cin >> numberOfGlasses;
-		  	  	  validChoice = true;
-		  	  	  break;
+		    	  cin >> numberOfGlasses;
+		    	  validChoice = true;
+		    	  break;
 
 		  case 2: cout << "One of my favorites! How many glasses of " << rosemaryName << " would you like? " << flush;
-		  	  	  cin >> numberOfGlasses;
-		  	  	  validChoice = true;
-		  	  	  break;
+		    	  cin >> numberOfGlasses;
+		    	  validChoice = true;
+		    	  break;
 
 		  case 3: cout << "A classic! How many glasses of " << raspberryName << " would you like? " << flush;
-		  	  	  cin >> numberOfGlasses;
-		  	  	  validChoice = true;
-		  	  	  break;
+		    	  cin >> numberOfGlasses;
+		    	  validChoice = true;
+		    	  break;
 
 		  default: cout << "I'm sorry, I don't recognize that choice. Please choose an option between \"1\" and \"3\"." << endl;
-		  	  	   validChoice = false;
-		  	  	   break;
+		    	   validChoice = false;
+		    	   break;
 		}
 	} while (!validChoice || numberOfGlasses <= 0 || numberOfGlasses >= 20);
 
